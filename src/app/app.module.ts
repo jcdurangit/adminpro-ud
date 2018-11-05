@@ -7,6 +7,10 @@ import { APP_ROUTES } from './app.routes';
 //MODULOS
 import { PagesModule } from './pages/pages.module';
 
+//SERVICIOS
+//import { SettingsService } from './services/service.index';
+import { ServiceModule } from './services/service.module';
+
 //COMPONENTES
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +19,7 @@ import { RegisterComponent } from './login/register.component';
 
 //TEMPORAL
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     PagesModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServiceModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
